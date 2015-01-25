@@ -72,4 +72,4 @@ tidydata <- aggregate(finaldata, by = list(Activity_Desciption = finaldata$Activ
 
 tidydata <- tidydata[, c(1:2, 5:70)] #removed the mean columns for the Activity_Description & Subject_id columns)
 
-write.table(tidydata, "tidydata.txt", sep = "\t") #writes tidydata to a txt file in working directory
+write.table(tidydata, "tidydata.txt", row.name = FALSE, sep = "\t") #writes tidydata to a txt file in working directory
