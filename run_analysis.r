@@ -66,7 +66,7 @@ names(finaldata) <- gsub("std", "StandardDeviation", names(finaldata))
 names(finaldata) <- gsub("mean", "Mean", names(finaldata))
 names(finaldata) <- gsub("\\()","",names(finaldata))
 
-# 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
+# 5. From the data set in step 4, create a second, independent tidy-data set with the average of each variable for each activity and each subject.
 
 tidydata <- aggregate(finaldata, by = list(Activity_Desciption = finaldata$Activity_Description, Subject_Id = finaldata$Subject_id), mean)
 
